@@ -1,0 +1,21 @@
+<div class="container col-md-50 w-50 align-center bg-dark p-5 m-5 align-middle text-center">
+<form class="bg-secondary font-weight-bold align-middle form-group" (submit)="validation($event)" >
+    <h3 class="text-white font-weight-bold">Login Page</h3>
+    <table class="text-center">
+         <tr>
+           <td> UserId :</td><td><input  type="text" #newuserid name="newuserid" ><p *ngIf="errormsg">username should be between 4-10 chars</p></td>
+        </tr>
+        <tr>
+           <td>Password :</td> <td><input type="Password" #newpassword name="newpassword"> <p *ngIf="errormsg">Password shouldn't be empty </p></td> 
+        </tr>
+        <tr>
+            <td class=" pl-5"><button type="submit" class="btn btn-success btn-outline-seccess btn-block  mt-3 ml-5 ">Login</button></td>
+        
+           <td class=" text-center pl-5"><button class="btn btn-warning  disabled  btn-block text-dark mt-3">Reset</button></td> 
+        </tr>
+        <tr>
+            <label *ngIf="errormsg" class="text-danger font-weight-bold">****</label>
+        </tr> 
+    </table>
+</form>
+</div>

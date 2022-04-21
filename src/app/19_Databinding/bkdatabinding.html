@@ -1,0 +1,21 @@
+
+<input id="myname" value="Hello" #namefield (change)="saveUsingEvent($event)">
+<p>You Entered {{name}} </p>
+
+<button (click)='saveUsingTemplateRef(namefield)'>Saveusing #</button>
+<button (click)='saveUsingId("myname")'>SaveUsingId</button> 
+
+<br>
+<br>
+<h1>here can 2</h1>
+<input na>
+<input name="name" #name>
+<br>
+<input type="number" name="salary" #salary>
+<button (click)="add(name.value ,+salary.value)">Add employee</button>
+<button (click)="showEmployees()">Show</button>
+<div *ngIf="show">
+    <ul>
+        <li *ngFor="let e of employees">{{e.name}}{{e.salary}}</li>
+    </ul>
+</div>

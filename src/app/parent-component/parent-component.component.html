@@ -1,0 +1,38 @@
+<p>parent-component works!</p>
+
+<form (submit)="addEmployee($event)">
+    <div class="bg-warning form-group w-25 p-5 container">
+    EmpId:<input type="number" name="empId">
+    Name:<input type="text" name="name">
+    Salary:<input type="number" name="salary">
+    <button type="submit">Add</button>
+    
+   
+
+</div>
+</form>
+
+<!-- <pre>
+    <ul>
+        <li *ngFor="let emp of employees">{{emp.empId}},{{emp.name}},{{emp.salary}}</li>
+    </ul>
+</pre> -->
+<p>ENTER PIZZA DETAILS HERE</p>
+
+<form (submit)="addPizza($event)">
+    <div class="bg-secondary form-group w-25 p-5 container">
+    Size:<input type="number" name="size">
+    Type:<input type="string" name="type">
+    Price:<input type="number" name="price">
+    <button type="submit" >Add Pizza</button>
+    
+</div>
+</form>
+
+<app-child-component [objects]="employees"></app-child-component>
+<app-child-component [objects]="pizzas"></app-child-component>   
+    
+
+    
+
+

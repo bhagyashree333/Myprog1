@@ -1,0 +1,29 @@
+<p>child-component works!</p>
+
+<!-- <ul>
+    <li *ngFor="let obj of objects">{{obj.empId}},{{obj.name}},{{obj.salary}}</li>
+</ul> -->
+
+<!-- <ul>
+    <li *ngFor="let obj of objects">
+         <div *ngIf="obj.empId && obj.name && obj.salary">
+            {{obj.empId}},{{obj.name}},{{obj.salary}}
+        </div>
+        <div *ngIf="obj.size&& obj.type && obj.price ">
+            {{obj.size}},{{obj.type}},{{obj.price}}
+        </div> 
+
+       
+            <div *ngFor="let obj2 of obj| keyvalue">
+                {{obj2.value}}
+            </div>
+            
+    </li>
+</ul> -->
+
+
+<ul>
+    <li *ngFor="let obj of objects">
+        <span *ngFor="let key of getKeys(obj)">{{obj[key]}}</span>
+    </li>
+</ul>
