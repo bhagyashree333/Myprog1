@@ -19,48 +19,27 @@ export class StoreComponent implements OnInit {
   storeFun()
   {
     
-    this.orderPlaced.emit(new Order(new Product("freeze",50000,"godrej"),1,2));
+    this.orderPlaced.emit(new Order("",2));
   }
 
 
   
 }
 class Order{
+  public get prname(): string {
+    return this._prname;
+  }
+  public set prname(value: string) {
+    this._prname = value;
+  }
   public get orderqty(): number {
     return this._orderqty;
   }
   public set orderqty(value: number) {
     this._orderqty = value;
   }
-  public get orderid(): number {
-    return this._orderid;
-  }
-  public set orderid(value: number) {
-    this._orderid = value;
-  }
-  constructor(private _prod:Product,private _orderid: number,private _orderqty: number){}
+ 
+  constructor(private _prname: string,private _orderqty: number){}
 }
 
 
-class Product{
-  public get prbrand(): string {
-    return this._prbrand;
-  }
-  public set prbrand(value: string) {
-    this._prbrand = value;
-  }
-  public get sprprice(): number {
-    return this._sprprice;
-  }
-  public set sprprice(value: number) {
-    this._sprprice = value;
-  }
-  
-  public get sprname(): string {
-    return this._sprname;
-  }
-  public set sprname(value: string) {
-    this._sprname = value;
-  }
-  constructor(private _sprname: string,private _sprprice: number,private _prbrand: string){}
-}

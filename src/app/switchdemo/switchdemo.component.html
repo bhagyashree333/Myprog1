@@ -1,0 +1,35 @@
+<p>switchdemo works!</p>
+
+
+
+<h3>Iteration over array of object containing arrray</h3>
+<div *ngFor="let obj of peopleByCity">
+
+    <div [ngSwitch]="obj.city">
+        <h2 *ngSwitchCase="'Pune'">{{obj.city}}:Maharashtra</h2>
+        <h2 *ngSwitchCase="'Belgaun'">{{obj.city}}:Karnataka</h2>
+        <h2 *ngSwitchDefault>some other state</h2>
+    </div>
+    <table border="5px">
+        <th>Name</th><th>Age</th>
+        <tr *ngFor="let person of obj.people">
+            <td>{{person.name}}</td><td>{{person.age}}</td>
+        </tr>
+    </table>
+</div> 
+<h3>Using ng-if:print all those who are 49 years of age and older</h3>
+<div *ngFor="let person of people">
+    <span *ngIf="person.age>=49">{{person.name+" : "+person.age}}</span>
+</div>
+
+<br>
+<br>
+<h1 appHighlightDirective>Namaste Bhagyashree</h1>
+
+<h2 appHighlightDirective [mycolor]="'orange'">i am giving color from here</h2>
+
+<p appMonazDirective [my-bgColor]="'yellow'" [text-color]="'black'" >providing listener function</p>
+
+<!-- <div >
+Please enter your fav color:<input appHighlightDirective  type="text" name="mycolor" #mycol [mycolor]="'mycolor'" >
+</div> -->
