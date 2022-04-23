@@ -18,8 +18,15 @@ export class ReactiveFormComponent implements OnInit {
     this.myForm=new FormGroup({
       fname:new FormControl('vivek'),
       lname:new FormControl('kulkarni')
+
+
     })
+    
+this.myForm.valueChanges.subscribe((form:any)=>{console.log("received changed form");console.log(form);});
+
+this.myForm.controls['fname'].valueChanges.subscribe((fieldValue:any)=>{console.log("Fname change"+fieldValue);});
    }
+ 
 onSubmit(){
   console.log(this.myForm.value);
   console.log(this.myForm.controls["fname"].value);
@@ -28,7 +35,10 @@ onSubmit(){
   console.log(this.myForm.controls["lname"].valid);
 
 }
-  ngOnInit(): void {
+
+ 
+
+ngOnInit(): void {
   }
 
 }

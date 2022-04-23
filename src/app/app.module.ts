@@ -18,6 +18,12 @@ import { MonazDirectiveDirective } from './monaz-directive.directive';
 import { SimpleForm2Component } from './simple-form2/simple-form2.component';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ParenttochildComponent } from './parenttochild/parenttochild.component';
+import { MyDataService } from './services/myservice';
+import { MyserviceCompComponent } from './myservice-comp/myservice-comp.component';
+import { ReadJsonComponent } from './read-json/read-json.component';
+import { getJSONService } from './services/jsonReaderservice';
+import { HttpClientModule } from '@angular/common/http';
 //import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 
 @NgModule({
@@ -37,6 +43,10 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
         // ChildInteractionComponent,
          SimpleForm2Component,
         ReactiveFormComponent,
+        ParenttochildComponent,
+        MyserviceCompComponent,
+        ReadJsonComponent
+        
     //TwowaybindingComponent
 
     
@@ -44,11 +54,11 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [getJSONService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildInteractionComponent } from './child-interaction.component';
+import { ParenttochildComponent } from './parenttochild.component';
 
-describe('ChildInteractionComponent', () => {
-  let component: ChildInteractionComponent;
-  let fixture: ComponentFixture<ChildInteractionComponent>;
+describe('ParenttochildComponent', () => {
+  let component: ParenttochildComponent;
+  let fixture: ComponentFixture<ParenttochildComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChildInteractionComponent ]
+      declarations: [ ParenttochildComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChildInteractionComponent);
+    fixture = TestBed.createComponent(ParenttochildComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildInteractionComponent } from './child-interaction.component';
+import { MyserviceCompComponent } from './myservice-comp.component';
 
-describe('ChildInteractionComponent', () => {
-  let component: ChildInteractionComponent;
-  let fixture: ComponentFixture<ChildInteractionComponent>;
+describe('MyserviceCompComponent', () => {
+  let component: MyserviceCompComponent;
+  let fixture: ComponentFixture<MyserviceCompComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChildInteractionComponent ]
+      declarations: [ MyserviceCompComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChildInteractionComponent);
+    fixture = TestBed.createComponent(MyserviceCompComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

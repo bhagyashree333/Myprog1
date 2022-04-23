@@ -1,0 +1,39 @@
+[{
+    "book":{
+        "title":"Batatyachi chal",
+        "author":"PLDeshpande",
+        "language":"Marathi",
+        "price":1000,
+        "toString":"function(){return 'Hello Batatyachi chal'}"
+    }
+},
+{
+    "book":{
+    "title":"Bunch of thoughts",
+        "author":"m.s.Golwalker",
+        "language":"English",
+        "price":1500,
+        "toString":"function(){return 'Hello Batatyachi chal'}"
+    }
+    
+},
+{
+    "book":{ 
+    "title":"1857 freedom thoughts",
+        "author":"v.d.savarkar",
+        "language":"English",
+        "price":500,
+        "toString":"function(){return 'Hello Batatyachi chal'}"
+    }
+},
+    {
+        "book":{ 
+        "title":"1857 frredom struggle 2",
+            "author":"v.d.savarkar",
+            "language":"English",
+            "price":500,
+            "toString":"function(){return 'Hello Batatyachi chal'}"
+        }
+    }
+    
+]

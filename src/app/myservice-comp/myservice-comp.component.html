@@ -1,0 +1,8 @@
+<p>myservice-comp works!</p>
+<div *ngIf="users.length>0;else loading">
+    <h3>List of users from user service</h3>
+</div>
+    <ul class="list-group">
+        <li *ngFor="let user of users" class="list-group-item">{{user}}</li>
+    </ul>
+    <ng-template #loading>Loading</ng-template>

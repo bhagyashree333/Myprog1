@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildInteractionComponent } from './child-interaction.component';
+import { ReadJsonComponent } from './read-json.component';
 
-describe('ChildInteractionComponent', () => {
-  let component: ChildInteractionComponent;
-  let fixture: ComponentFixture<ChildInteractionComponent>;
+describe('ReadJsonComponent', () => {
+  let component: ReadJsonComponent;
+  let fixture: ComponentFixture<ReadJsonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChildInteractionComponent ]
+      declarations: [ ReadJsonComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChildInteractionComponent);
+    fixture = TestBed.createComponent(ReadJsonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
