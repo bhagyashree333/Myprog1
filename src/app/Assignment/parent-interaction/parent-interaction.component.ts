@@ -13,4 +13,9 @@ export class ParentInteractionComponent implements OnInit {
   }
 
   categories: string[] = ['Toys','FootWear','Mens','Sports'];
+
+  display()
+  {
+    
+  }
 }
