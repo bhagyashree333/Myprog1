@@ -2,6 +2,7 @@
 
 <!--<div><h5>No of products available with Child component : {{childComponent?childComponent.products.length:"Not Accessible "}}</h5>-->
     <!-- TODO #1 Iterate over categories pass category to <interactionc-child>  -->
+        <input type="text" #parentinput (change)="display(parentinput.value)">
     <app-child-interaction *ngFor="let category of categories" [productCategory]="category"></app-child-interaction>
     <!-- TODO #2  give grey colour to all odd rows and lightblue to every even rows -->
     <!-- TODO #3 print no of products for a first and last category by accessing childCOmponent's template ref variable -->
