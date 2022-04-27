@@ -1,15 +1,23 @@
 <p>read-json works!</p>
 
-<table border="5px" class="bg-warning text-center w-25">
-    <!-- Iterate Over products and print product details in a tabular form if productcategory of the product matches with input productCategory received as input from parent
+<!-- <table border="5px" class="bg-warning text-center w-25">
+    Iterate Over products and print product details in a tabular form if productcategory of the product matches with input productCategory received as input from parent
     compoenent where child is used -->
-    
-    <h3>My book list</h3>
+
+<!-- <h3>My book list</h3>
    
       
     <tr><td> Title</td><td>Author</td><td>language</td></tr>
     <tr *ngFor="let book of books">  
       
-      <td >{{book.book.title}}</td><td>{{book.book.author}}</td><td>{{book.book.language}}</td>
+      <td >{{book.book .title}}</td><td>{{book.book.author}}</td><td>{{book.book.language}}</td>
     </tr>
-  </table>
+  </table> -->
+
+
+
+<table border="2" class="col-sm-5 container form-group bg-warning text-center w-50">
+   <th *ngFor="let book of getHeader()"> {{book}}</th>
+     <tr *ngFor="let bookObj of books">
+        <td *ngFor="let book of bookObj.book | keyvalue">{{book.value}}</td>  </tr>
+</table>

@@ -1,22 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import {getJSONService} from '../services/jsonReaderservice';
+import { getJSONService } from '../services/jsonReaderservice';
 @Component({
   selector: 'app-read-json',
   templateUrl: './read-json.component.html',
   styleUrls: ['./read-json.component.css']
 })
 export class ReadJsonComponent implements OnInit {
- books:any;
+  books: any;
 
-  constructor(private jsonReaderservice:getJSONService) {
-    this.jsonReaderservice.getJSON().subscribe((data)=>{
+  constructor(private jsonReaderservice: getJSONService) {
+    this.jsonReaderservice.getJSON().subscribe((data) => {
       console.log(data);
       console.log("Readjson component")
-      this.books=data;
+      this.books = data;
       console.log(this.books);
     })
-   }
+  }
 
+  getHeader() {
+    return Object.keys(this.books[0].book);
+  }
   ngOnInit(): void {
   }
 

@@ -13,7 +13,7 @@ import { SwitchdemoComponent } from './switchdemo/switchdemo.component';
 import { HighlightDirectiveDirective } from './highlight-directive.directive';
 
 import { MonazDirectiveDirective } from './monaz-directive.directive';
-//import { ChildInteractionComponent } from './Assignment/child-interaction/child-interaction.component';
+import { ChildInteractionComponent } from './Assignment/child-interaction/child-interaction.component';
 
 import { SimpleForm2Component } from './simple-form2/simple-form2.component';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -24,6 +24,9 @@ import { MyserviceCompComponent } from './myservice-comp/myservice-comp.componen
 import { ReadJsonComponent } from './read-json/read-json.component';
 import { getJSONService } from './services/jsonReaderservice';
 import { HttpClientModule } from '@angular/common/http';
+import { ParentInteractionComponent } from './Assignment/parent-interaction/parent-interaction.component';
+import { Home1Component } from './pract/home1/home1.component';
+import { Home2Component } from './pract/home2/home2.component';
 //import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 
 @NgModule({
@@ -40,12 +43,15 @@ import { HttpClientModule } from '@angular/common/http';
     HighlightDirectiveDirective,
     
     MonazDirectiveDirective,
-        // ChildInteractionComponent,
+        ChildInteractionComponent,
          SimpleForm2Component,
         ReactiveFormComponent,
         ParenttochildComponent,
         MyserviceCompComponent,
-        ReadJsonComponent
+        ReadJsonComponent,
+        ParentInteractionComponent,
+        Home1Component,
+        Home2Component
         
     //TwowaybindingComponent
 

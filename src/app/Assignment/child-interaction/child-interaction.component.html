@@ -1,11 +1,14 @@
 <p>child-interaction works!</p>
 
-<table border="1px">
+
     <!-- Iterate Over products and print product details in a tabular form if productcategory of the product matches with input productCategory received as input from parent
     compoenent where child is used -->
     
     <h3>{{productCategory}}</h3>
+    <table border="1px">
     <tr *ngFor="let p of products">
       <td *ngIf="p.category==productCategory">{{p.name}}</td>
+      <td *ngIf="p.category==productCategory">{{p.description}}</td>
+      <td *ngIf="p.category==productCategory">{{p.price}}</td>
     </tr>
-  </table>
+  </table>  
